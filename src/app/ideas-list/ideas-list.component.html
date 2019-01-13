@@ -1,0 +1,12 @@
+<div *ngFor="let idea of ideas">
+	<div class="row">
+        <div class="col offset-lg-2 offset-xl-3"><img class="rounded-circle" src="https://www.elheraldo.hn/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=X9yDlWz1wLpx6HSTNa7Wps$daE2N3K4ZzOUsqbU5sYuQpVQO601SOZrZowQkxuyU6FB40xiOfUoExWL3M40tfzssyZqpeG_J0TFo7ZhRaDiHC9oxmioMlYVJD0A$3RbIiibgT65kY_CSDiCiUzvHvODrHApbd6ry6YGl5GGOZrs-&CONTENTTYPE=image/jpeg" style="width: 150px;height: 150px;margin: 15px;"></div>
+     </div>
+     <div class="row">
+           <div class="col">
+                <p style="font-size: 20px;margin: 10px;"><strong>Idea 1</strong><br><strong>{{idea.titulo}}</strong><br></p>
+                <p style="margin: 10px;height: 100px;">{{idea.descripcion}}<br><br></p>
+ 			<p style="margin: 10px;">Votos &nbsp; &nbsp; <strong>{{idea.numeroVotos}}</strong> &nbsp; &nbsp; Comentarios &nbsp; &nbsp;<strong>{{idea.getNumeroComentarios()}}</strong></p>
+        </div>
+     </div>
+</div>
