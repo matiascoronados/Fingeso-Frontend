@@ -54,69 +54,35 @@
         </ul>
     </div>
 </nav>-->
+
 <body>
  <div class="header-blue" style="background-color: rgb(255,255,255);background-image: url(&quot;null&quot;);margin: 50;height: 750px;">
             <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search" style="background-color: rgb(208,61,61);height: 90px;">
                 <div class="container">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="#" style="color: rgb(255,255,255);">Alaya</a>
+                        <a class="navbar-brand" href="#" style="color: rgb(255,255,255);font-size: 30px">Alaya</a>
                     </div>
                     <div class="collapse navbar-collapse" id="navcol-1">
                         <ul class="nav navbar-nav">
-                            <li><a href="#" style="color: rgb(255,255,255);">Ideas</a></li>
-                            <li><a href="#" style="color: rgb(255,255,255);">Retos</a></li>
+                            <li><a href="#" style="color: rgb(255,255,255);font-size: 15px">Ideas</a></li>
+                            <li><a href="#" style="color: rgb(255,255,255);font-size: 15px">Retos</a></li>
                         </ul>
                         <form class="form-inline mr-auto" target="_self">
                             <div class="form-group"><label for="search-field"></label></div>
-                        </form><span class="navbar-text"> <a href="#" class="login">
-                        <br>Bienvenido/a&nbsp;<strong>Carlos Díaz</strong><br><br></a></span><a class="btn btn-light action-button" role="button" href="#" style="background-color: rgb(255,255,255);color: rgb(0,0,0);margin: 5px;">Perfil</a>
-                        <a class="btn btn-light action-button" role="button" href="#" style="background-color: rgb(255,255,255);color: rgb(0,0,0);margin: 5px;">Cerrar sesión<br></a>
+                        </form><span class="navbar-text"> <a href="#" class="login" style="font-size: 15px;">
+                        <br>Bienvenido/a&nbsp;<strong>Carlos Díaz</strong><br><br></a></span><a class="btn btn-light action-button" role="button" href="#" style="background-color: rgb(255,255,255);color: rgb(0,0,0);margin: 5px;font-size: 15px">Perfil</a>
+                        <a class="btn btn-light action-button" role="button" href="#" style="background-color: rgb(255,255,255);color: rgb(0,0,0);margin: 5px;background-size: 20px;font-size: 15px">Cerrar sesión<br></a>
                     </div>
                 </div>
             </nav>
-            <div class="row">
-                <div class="col-lg-2 offset-lg-1 offset-xl-1"><select class="border rounded" style="height: 40px;margin: 15px;background-color: rgb(255,255,255);width: 200px;"><optgroup label="Elige una opción"><option value="12">Ordenar por publicación</option><option value="13">Ordenar por comentarios</option><option value="14">Ordenar por votos</option></optgroup></select></div>
-                <div
-                    class="col-lg-6 offset-lg-0" style="width: 700px;"><input type="text" style="width: 570px;margin: 15px;height: 40px;"></div>
-            <div class="col-lg-1 offset-lg-0" style="padding: 0px;"><button class="btn" type="button" style="height: 40px;margin: 15px;padding: 0px;width: 120px;color: rgb(255,255,255);background-color: rgb(208,61,61);">Buscar</button></div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-xl-3">
-                <div class="row">
-                    <div class="col-xl-6 offset-lg-3 offset-xl-3"><input type="image" src="https://cdn.pixabay.com/photo/2017/01/10/23/01/icon-1970474_960_720.png" style="width: 150px;height: 150px;margin: 15px;padding: 0px;"></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-xl-8 offset-lg-3">
-                        <p style="font-size: 20px;margin: 10px;"><strong>&nbsp; &nbsp; &nbsp;Agregar idea</strong></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col offset-xl-0">
-                <app-ideas-list></app-ideas-list>
-                <div class="row">
-                    <div class="col offset-xl-9" style="padding: 20px;">
-                        <nav>
-                            <ul class="pagination">
-                                <li class="page-item"><a class="page-link" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-                                <li class="page-item"><a class="page-link">1</a></li>
-                                <li class="page-item"><a class="page-link">2</a></li>
-                                <li class="page-item"><a class="page-link">3</a></li>
-                                <li class="page-item"><a class="page-link">4</a></li>
-                                <li class="page-item"><a class="page-link">5</a></li>
-                                <li class="page-item"><a class="page-link" aria-label="Next"><span aria-hidden="true">»</span></a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <nav style="margin: 10px;width: 200px;">
-                    <ul class="pagination"></ul>
-                </nav>
-            </div>
-        </div>
+            <router-outlet></router-outlet>
     </div>
-        <script src="assets/js/jquery.min.js"></script>
+
+    <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
+
+
 
 
 

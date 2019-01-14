@@ -5,18 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CrearIdeaComponent } from './crear-idea/crear-idea.component';
 import { IdeasListComponent } from './ideas-list/ideas-list.component';
+import { IdeasEditComponent } from './ideas-edit/ideas-edit.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CrearIdeaComponent,
-    IdeasListComponent
+    IdeasListComponent,
+    IdeasEditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
