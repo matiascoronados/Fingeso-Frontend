@@ -6,7 +6,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 html {
@@ -20,12 +20,6 @@ html {
 
 
 
-.header-blue {
-  background: linear-gradient(135deg, #172a74, #21a9af);
-  background-color: #184e8e;
-  padding-bottom: 80px;
-  font-family: 'Source Sans Pro', sans-serif;
-}
 
 @media (min-width:768px) {
   .header-blue {
@@ -223,7 +217,6 @@ html {
   border: 1px solid #444;
   background-color: #aaa;
   overflow: hidden;
-  background: url(/img/screen-content-iphone-6.jpg);
   background-size: cover;
   background-position: center;
 }

@@ -8,7 +8,6 @@ import { IdeasListComponent } from './ideas-list/ideas-list.component';
 import { IdeasEditComponent } from './ideas-edit/ideas-edit.component';
 import { FormsModule } from '@angular/forms';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +19,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

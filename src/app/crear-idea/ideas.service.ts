@@ -6,12 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class IdeasService {
-  public API = '//localhost:8080';
+  public API = 'http://localhost:8080';
   public IDEA_API = this.API + '/ideas';
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<any> {
-    return this.http.get('//localhost:8080/ideas');
+    return this.http.get(this.IDEA_API);
   }
 
   get(id: string){
@@ -20,17 +20,11 @@ export class IdeasService {
 
   save(idea: any): Observable<any>{
   	let result: Observable<Object>;
-  	if(idea['href']){
-  		result = this.http.put(idea.href, idea);
-  	}
-  	else{
-  		result = this.http.post(this.IDEA_API, idea);
-  	}
-  	return result;
+    result = this.http.post(this.IDEA_API, idea);
+    return result;
   }
 
   remove(href: string){
   	return this.http.delete(href);
   }
-
 }
