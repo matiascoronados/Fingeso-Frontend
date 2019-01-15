@@ -1,17 +1,28 @@
 
 
 <div class="row">
-                <div class="col-lg-2 offset-lg-1 offset-xl-1"><select class="border rounded" id="dropDownOrdenar" ><optgroup label="Elige una opción"><option value="12">Ordenar por publicación</option><option value="13">Ordenar por comentarios</option><option value="14">Ordenar por votos</option></optgroup></select></div>
-                <div
-                    class="col-lg-6 offset-lg-0" style="width: 700px;"><input type="text" id="inputText"></div>
-            <div class="col-lg-1 offset-lg-0" style="padding: 0px;"><button class="btn" type="button" id="buscarButton">Buscar</button></div>
+        <div class="col-lg-2 offset-lg-1 offset-xl-1">
+            <select class="border rounded">
+                <optgroup label="Elige una opción">
+                    <option value="12">Ordenar por publicación</option>
+                    <option value="13">Ordenar por comentarios</option>
+                    <option value="14">Ordenar por votos</option></optgroup>
+            </select>
         </div>
+        <div class="col-lg-6 offset-lg-0" style="width: 700px;">
+            <input type="text" style="width: 570px;margin: 15px;height: 40px;">
+        </div>
+        <div class="col-lg-1 offset-lg-0" style="padding: 0px;">
+            <button class="btn" type="button" id="buscarButton">Buscar</button>
+        </div>
+    </div>
 <div class="row">
-<div class="col-lg-4 col-xl-3">
+    <div class="col-lg-4 col-xl-3">
         <div class="row">
             <div class="col-xl-6 offset-lg-3 offset-xl-3">
                 <a [routerLink] = "['/ideas-add']" > <input type="image" id="botonAgregarIdea" src="/assets/img/addIdeaIcon.png" href="//localhost:8080/ideas-add"></a> </div>
             </div>
+        </div>
         <div class="row">
             <div class="col-lg-6 col-xl-8 offset-lg-3">
                 <p id="addIdeaText" > <strong>Agregar Idea </strong>  </p>    
