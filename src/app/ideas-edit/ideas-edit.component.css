@@ -1,3 +1,19 @@
 .display-4 {
-	color: #333333;
+	height: 60px;
+	font-size: 40px;
+	margin: 10px;
 }
+
+.text-left{
+	font-size: 25px;
+	width: 250px;
+}
+
+.btn{
+	background-color: rgb(208,61,61);
+	font-size: 20px;
+	filter: blur(0px) brightness(101%);
+	margin: 25px;
+	color: #ffffff;
+}
+
