@@ -1,0 +1,36 @@
+.border.rounded{
+	height: 40px;
+    margin: 15px;
+    width: 200px;
+    font-size: 15px;
+    background-color: #ffffff
+}
+
+.btn{
+	height: 40px;
+	margin: 15px;
+	padding: 0px;
+	width: 120px;
+	color: #ffffff;
+	background-color: rgb(208,61,61);
+	font-size: 15px;
+}
+
+img {
+	width: 150px;
+	height: 150px;
+	margin: 15px;
+}
+
+.image{
+	width: 150px;
+	height: 150px;
+	margin: 15px;
+	padding: 0px;
+}
+
+.text{
+	width: 570px;
+	margin: 15px;
+	height: 40px;
+}
