@@ -34,6 +34,10 @@ export class IdeasService {
     return this.http.get(this.IDEA_API + '/getIdeaByFecha');
   } 
 
+  getByTitulo(titulo: string): Observable<any>{
+    return this.http.get(this.IDEA_API + '/' + titulo +'/getIdeaByTitulo');
+  } 
+
   save(idea: any): Observable<any>{
     let result: Observable<Object>;
     result = this.http.post(this.IDEA_API + '/5c3a8a33b41d12063d7dc59d', idea);

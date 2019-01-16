@@ -27,10 +27,17 @@
                     </optgroup>
                 </select>
             </div>
-                <div class="col-lg-6 offset-lg-0" style="width: 700px;">
-                    <input type="text" id="inputText"></div>
+
+            <div class="col-lg-6 offset-lg-0" style="width: 700px;">
+                <input id="titulo" [(ngModel)]="titulo"/></div>
+
             <div class="col-lg-1 offset-lg-0" style="padding: 0px;">
-                <button class="btn" type="button" id="buscarButton">Buscar</button></div>
+                <button (click)="getIdeaByTitulo()" class="btn" type="button" id="buscarButton">Buscar</button></div>
+
+
+
+
+
         
        <!--- <div class="col-lg-6 offset-lg-0" style="width: 700px;">
             <input type="text" style="width: 570px;margin: 15px;height: 40px;">

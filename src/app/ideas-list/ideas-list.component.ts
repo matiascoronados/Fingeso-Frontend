@@ -9,16 +9,16 @@ import { IdeasService } from '../crear-idea/ideas.service';
 })
 export class IdeasListComponent implements OnInit {
   ideas: Array<any>;
+  titulo: string;
   
   constructor(private ideasService: IdeasService) { }
 
-  
+
   getIdeaByComentarios(){
     this.ideasService.getByComentarios().subscribe(data => {
       this.ideas = data;
       });
     }  
-  
 
   getIdeaByVotos(){
     this.ideasService.getByVotos().subscribe(data => {
@@ -31,6 +31,12 @@ export class IdeasListComponent implements OnInit {
       this.ideas = data;
       });
     } 
+
+  getIdeaByTitulo(){
+    this.ideasService.getByTitulo(this.titulo).subscribe(data => {
+    this.ideas = data;
+    });
+  }
 
   ngOnInit() {
   	this.ideasService.getAll().subscribe(data => {
