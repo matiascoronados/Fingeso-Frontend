@@ -1,0 +1,41 @@
+<form #ideaForm="ngForm" (ngSubmit)="save()">
+<div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="display-4 text-center" id="creaTuIdeaText"><strong>Crea tu idea</strong></h2>
+                </div>
+                <div class="col-md-12">
+                    <div class="row" style="width: 1000px;">
+                        <div class="col" style="width: 100px;padding: 0px;">
+                            <p class="text-left" id="tituloIdeaText">&nbsp; &nbsp; &nbsp; &nbsp;Título Idea</p>
+                        </div>
+                        <div class="col" id="ideaTitleBox"><textarea type="text" [(ngModel)]="idea.titulo"  name="titulo" id="tituloIdea"> </textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row" style="width: 1000px;">
+                        <div class="col" style="width: 100px;padding: 0px;">
+                            <p class="text-left" id="descripcionText">&nbsp; &nbsp; &nbsp; &nbsp;Descripción Idea</p>
+                        </div>
+                        <div class="col" style="width: 2000px;">
+                            <textarea type="text" [(ngModel)]="idea.descripcion"  name="descripcion" id="descripcionTextBox"> </textarea>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-7"></div>
+            <div class="col-md-6 col-xl-1 offset-xl-0" style="width: 1000px;">
+            	<button class="btn" type="submit" id="subirIdeaButton">Subir idea </button></div>
+        </div>
+    </div>
+</div>
+</form>
+
+

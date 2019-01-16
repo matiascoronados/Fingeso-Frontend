@@ -72,6 +72,7 @@
                 <p id="tiempo">Tiempo restante: {{reto.tiempo}} dias<br><br></p>
                 <p id="numeroIdeas">Ideas: &nbsp; &nbsp; <strong>{{reto.cantidadIdeas}}</strong></p>
                 <p id="fechaPublicacion">Publicacion: {{reto.fechaPublicacion}}<br><br></p>
+                <a [routerLink] = "['/idearetos-list', reto.id]" ><button class="btn" type="button">Ver</button></a>
             </div>
         </div>
 </div>

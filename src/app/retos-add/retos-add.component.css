@@ -1,0 +1,53 @@
+.display-4 {
+	height: 60px;
+	font-size: 40px;
+	margin: 10px;
+}
+
+
+#creaTuIdeaText{
+	height: 60px;
+	font-size: 40px;
+	margin: 10px 10px -2px 130px;
+}
+
+#tituloIdeaText{
+	font-size: 25px;
+	width: 250px;
+}
+
+#tituloIdea{
+	width: 700px;
+	height: 40px;
+	font-size: 20px;
+}
+
+#ideaTitleBox{
+	width: 2000px;
+}
+
+#descripcionText{
+	font-size: 25px;
+	width: 250px; 
+}
+
+#descripcionTextBox{
+	width: 700px;
+	height: 300px;
+	font-size: 15px;
+}
+#adjuntarImagenButton{
+	background-color: rgb(208,61,61);
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 20px;
+	filter: blur(0px) brightness(101%);
+	margin: 25px 25px 25px 270px;
+	color: rgb(255,255,255);
+}
+#subirIdeaButton{
+	background-color: rgb(208,61,61);
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 20px;filter: blur(0px) brightness(101%);
+	margin: 25px 25px 25px -87px;
+	color: rgb(255,255,255);
+}

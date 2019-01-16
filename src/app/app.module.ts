@@ -9,6 +9,9 @@ import { IdeasEditComponent } from './ideas-edit/ideas-edit.component';
 import { FormsModule } from '@angular/forms';
 import { RetosListComponent } from './retos-list/retos-list.component';
 import { IdeaShowComponent } from './idea-show/idea-show.component';
+import { IdearetosListComponent } from './idearetos-list/idearetos-list.component';
+import { IdearetosAddComponent } from './idearetos-add/idearetos-add.component';
+import { RetosAddComponent } from './retos-add/retos-add.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { IdeaShowComponent } from './idea-show/idea-show.component';
     IdeasListComponent,
     IdeaShowComponent,
     IdeasEditComponent,
-    RetosListComponent
+    RetosListComponent,
+    IdearetosListComponent,
+    IdearetosAddComponent,
+    RetosAddComponent
   ],
   imports: [
     BrowserModule,
