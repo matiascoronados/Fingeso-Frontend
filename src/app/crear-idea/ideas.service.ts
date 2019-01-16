@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class IdeasService {
   public API = 'http://localhost:8080';
   public IDEA_API = this.API + '/ideas';
@@ -13,18 +14,38 @@ export class IdeasService {
   getAll(): Observable<any> {
     return this.http.get(this.IDEA_API);
   }
-  
-  save(idea: any): Observable<any>{
-  	let result: Observable<Object>;
-    result = this.http.post(this.IDEA_API, idea);
-    return result;
-  }
 
   show(id: string): Observable<any>{
     return this.http.get(this.IDEA_API + '/' + id);
   }
 
+  get(id: string){
+  	return this.http.get(this.IDEA_API + '/' + id);
+  }
+
   remove(href: string){
   	return this.http.delete(href);
+  }
+
+  getByComentarios(): Observable<any>{
+    return this.http.get(this.IDEA_API + '/getIdeaByComentarios');
+  }
+
+  getByVotos(): Observable<any>{
+    return this.http.get(this.IDEA_API + '/getIdeaByVotos');
+  }
+
+  getByFecha(): Observable<any>{
+    return this.http.get(this.IDEA_API + '/getIdeaByFecha');
+  } 
+
+  getByTitulo(titulo: string): Observable<any>{
+    return this.http.get(this.IDEA_API + '/' + titulo +'/getIdeaByTitulo');
+  } 
+
+  save(idea: any): Observable<any>{
+    let result: Observable<Object>;
+    result = this.http.post(this.IDEA_API + '/5c3a8a33b41d12063d7dc59d', idea);
+    return result;
   }
 }
