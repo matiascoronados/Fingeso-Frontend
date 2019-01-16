@@ -1,0 +1,23 @@
+#usuarioImagen{
+	width: 300px;
+	padding: 10px;
+	background-size: auto;
+	margin: 0px;
+	height: 300px;
+}
+
+#datos{
+	width: 300px;
+}
+
+#ideaTitulo{
+	width: 700px;
+	font-size: 25px;
+	margin: 10px;
+}
+
+#ideaDescripcion{
+	width: 700px;
+	font-size: 18px;
+	margin: 10px;
+}

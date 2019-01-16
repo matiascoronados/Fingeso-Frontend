@@ -7,13 +7,15 @@ import { CrearIdeaComponent } from './crear-idea/crear-idea.component';
 import { IdeasListComponent } from './ideas-list/ideas-list.component';
 import { IdeasEditComponent } from './ideas-edit/ideas-edit.component';
 import { FormsModule } from '@angular/forms';
+import { IdeaShowComponent } from './idea-show/idea-show.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CrearIdeaComponent,
     IdeasListComponent,
-    IdeasEditComponent
+    IdeasEditComponent,
+    IdeaShowComponent
   ],
   imports: [
     BrowserModule,

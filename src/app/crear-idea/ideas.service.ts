@@ -13,15 +13,15 @@ export class IdeasService {
   getAll(): Observable<any> {
     return this.http.get(this.IDEA_API);
   }
-
-  get(id: string){
-  	return this.http.get(this.IDEA_API + '/' + id);
-  }
-
+  
   save(idea: any): Observable<any>{
   	let result: Observable<Object>;
     result = this.http.post(this.IDEA_API, idea);
     return result;
+  }
+
+  show(id: string): Observable<any>{
+    return this.http.get(this.IDEA_API + '/' + id);
   }
 
   remove(href: string){
