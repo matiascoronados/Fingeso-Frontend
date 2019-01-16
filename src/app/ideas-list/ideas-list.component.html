@@ -1,5 +1,16 @@
 
 
+<div style="text-align:center"><br/>
+  <button id='btn' (click)='getIdeaByComentarios()'>Ordenar por comentarios </button>
+</div>
+
+<div style="text-align:center"><br/>
+  <button id='btn' (click)='getIdeaByVotos()'>Ordenar por votos </button>
+</div>
+<div style="text-align:center"><br/>
+  <button id='btn' (click)='getIdeaByFecha()'>Ordenar por mas recientes </button>
+</div>
+
 <div class="row">
        <!--- <div class="col-lg-2 offset-lg-1 offset-xl-1">
             <select class="border rounded">
@@ -54,7 +65,7 @@
            <div class="col">
                 <p id="ideaTitle"><br><strong>{{idea.titulo}}</strong><br></p>
                 <p id="ideaDescription">{{idea.descripcion}}<br><br></p>
-            <p id="votesAndNumberComments">Votos &nbsp; &nbsp; <strong>{{idea.numeroVotos}}</strong> &nbsp; &nbsp; Comentarios &nbsp; &nbsp;<strong>4</strong></p>
+            <p id="votesAndNumberComments">Votos &nbsp; &nbsp; <strong>{{idea.numeroVotos}}</strong> &nbsp; &nbsp; Comentarios &nbsp; &nbsp;<strong>{{idea.numeroComentarios}}</strong></p>
         </div>
     </div>
 </div>

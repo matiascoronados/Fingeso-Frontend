@@ -12,6 +12,26 @@ export class IdeasListComponent implements OnInit {
   
   constructor(private ideasService: IdeasService) { }
 
+  
+  getIdeaByComentarios(){
+    this.ideasService.getByComentarios().subscribe(data => {
+      this.ideas = data;
+      });
+    }  
+  
+
+  getIdeaByVotos(){
+    this.ideasService.getByVotos().subscribe(data => {
+      this.ideas = data;
+      });
+    }
+
+  getIdeaByFecha(){
+    this.ideasService.getByFecha().subscribe(data => {
+      this.ideas = data;
+      });
+    } 
+
   ngOnInit() {
   	this.ideasService.getAll().subscribe(data => {
   		this.ideas = data;

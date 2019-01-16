@@ -18,13 +18,25 @@ export class IdeasService {
   	return this.http.get(this.IDEA_API + '/' + id);
   }
 
-  save(idea: any): Observable<any>{
-  	let result: Observable<Object>;
-    result = this.http.post(this.IDEA_API, idea);
-    return result;
-  }
-
   remove(href: string){
   	return this.http.delete(href);
+  }
+
+    getByComentarios(): Observable<any>{
+    return this.http.get(this.IDEA_API + '/getIdeaByComentarios');
+  }
+
+  getByVotos(): Observable<any>{
+    return this.http.get(this.IDEA_API + '/getIdeaByVotos');
+  }
+
+  getByFecha(): Observable<any>{
+    return this.http.get(this.IDEA_API + '/getIdeaByFecha');
+  } 
+
+  save(idea: any): Observable<any>{
+    let result: Observable<Object>;
+    result = this.http.post(this.IDEA_API + '/5c3a8a33b41d12063d7dc59d', idea);
+    return result;
   }
 }

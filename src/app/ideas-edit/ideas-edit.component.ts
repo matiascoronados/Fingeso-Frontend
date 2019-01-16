@@ -2,6 +2,7 @@ import { Component, OnDestroy ,OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IdeasService } from '../crear-idea/ideas.service';
+import { UsuarioService } from '../crear-idea/usuario.service';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -14,7 +15,8 @@ export class IdeasEditComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
   			  private router: Router,
-  			  private ideasService: IdeasService) { }
+  			  private ideasService: IdeasService,
+          private usuarioService: UsuarioService) { }
 
   ngOnInit() {
   	
@@ -25,10 +27,16 @@ export class IdeasEditComponent implements OnInit {
   	this.router.navigate(['/ideas-list']);
   }
 
-  save() {
-  	this.ideasService.save(this.idea).subscribe(result => {
-  		this.gotoList();
-  	}, error => console.error(error));
+   save() {
+
+    this.ideasService.save(this.idea).subscribe(result => {
+      this.gotoList();
+    }, error => console.error(error));
+    
+    this.usuarioService.saveIdea(this.idea).subscribe(result => {
+      this.gotoList();
+    }, error => console.error(error));
+
   }
 
   remove(href){
