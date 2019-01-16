@@ -19,6 +19,7 @@ export class IdeasListComponent implements OnInit {
       this.ideas = data;
       });
     }  
+  
 
   getIdeaByVotos(){
     this.ideasService.getByVotos().subscribe(data => {
@@ -30,18 +31,19 @@ export class IdeasListComponent implements OnInit {
     this.ideasService.getByFecha().subscribe(data => {
       this.ideas = data;
       });
-    } 
+    }    
 
-  getIdeaByTitulo(){
+    getIdeaByTitulo(){
     this.ideasService.getByTitulo(this.titulo).subscribe(data => {
-    this.ideas = data;
-    });
-  }
+      this.ideas = data;
+      });
+    }  
+  
 
   ngOnInit() {
-  	this.ideasService.getAll().subscribe(data => {
-  		this.ideas = data;
-  	});
+      this.ideasService.getAll().subscribe(data => {
+      this.ideas = data;
+      });
   }
 
 }

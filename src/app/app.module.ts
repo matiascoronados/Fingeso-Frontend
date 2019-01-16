@@ -7,6 +7,7 @@ import { CrearIdeaComponent } from './crear-idea/crear-idea.component';
 import { IdeasListComponent } from './ideas-list/ideas-list.component';
 import { IdeasEditComponent } from './ideas-edit/ideas-edit.component';
 import { FormsModule } from '@angular/forms';
+import { RetosListComponent } from './retos-list/retos-list.component';
 import { IdeaShowComponent } from './idea-show/idea-show.component';
 
 @NgModule({
@@ -14,8 +15,9 @@ import { IdeaShowComponent } from './idea-show/idea-show.component';
     AppComponent,
     CrearIdeaComponent,
     IdeasListComponent,
+    IdeaShowComponent,
     IdeasEditComponent,
-    IdeaShowComponent
+    RetosListComponent
   ],
   imports: [
     BrowserModule,

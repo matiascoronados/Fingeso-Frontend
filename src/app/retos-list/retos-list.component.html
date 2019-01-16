@@ -1,14 +1,11 @@
 
 
 <div style="text-align:center"><br/>
-  <button id='btn' (click)='getIdeaByComentarios()'>Ordenar por comentarios </button>
+  <button id='btn' (click)='getRetoByIdeas()'>Ordenar por numero de ideas </button>
 </div>
 
 <div style="text-align:center"><br/>
-  <button id='btn' (click)='getIdeaByVotos()'>Ordenar por votos </button>
-</div>
-<div style="text-align:center"><br/>
-  <button id='btn' (click)='getIdeaByFecha()'>Ordenar por mas recientes </button>
+  <button id='btn' (click)='getRetoByFecha()'>Ordenar por mas recientes </button>
 </div>
 
 <div class="row">
@@ -22,16 +19,21 @@
             <div class="col-lg-2 offset-lg-1 offset-xl-1">
                 <select class="border rounded" id="dropDownOrdenar" >
                     <optgroup label="Elige una opción"><option value="12">Ordenar por publicación</option>
-                        <option value="13">Ordenar por comentarios</option>
-                        <option value="14">Ordenar por votos</option>
+                        <option value="13">Ordenar por ideas</option>
                     </optgroup>
                 </select>
             </div>
+            
             <div class="col-lg-6 offset-lg-0" style="width: 700px;">
                 <input id="titulo" [(ngModel)]="titulo"/></div>
 
             <div class="col-lg-1 offset-lg-0" style="padding: 0px;">
-                <button (click)="getIdeaByTitulo()" class="btn" type="button" id="buscarButton">Buscar</button></div>
+                <button (click)="getRetoByNombre()" class="btn" type="button" id="buscarButton">Buscar</button></div>
+                
+
+
+
+
         
        <!--- <div class="col-lg-6 offset-lg-0" style="width: 700px;">
             <input type="text" style="width: 570px;margin: 15px;height: 40px;">
@@ -44,32 +46,33 @@
     <div class="col-lg-4 col-xl-3">
         <div class="row">
             <div class="col-xl-6 offset-lg-3 offset-xl-3">
-                <a [routerLink] = "['/ideas-add']" > <input type="image" id="botonAgregarIdea" src="/assets/img/addIdeaIcon.png" href="//localhost:8080/ideas-add"></a> 
+                <a [routerLink] = "['/retos-add']" > <input type="image" id="botonAgregarIdea" src="/assets/img/addIdeaIcon.png" href="//localhost:8080/retos-add"></a> 
             </div>
         </div>
         
         <div class="row">
             <div class="col-lg-6 col-xl-8 offset-lg-3">
-                <p id="addIdeaText" > <strong>Agregar Idea </strong>  </p>    
+                <p id="addRetoText" > <strong>Agregar Reto </strong>  </p>    
                         <!--<p style="font-size: 20px;margin: 10px;"><strong>&nbsp; &nbsp; &nbsp;Agregar idea</strong></p>-->
             </div>
         </div>
 </div>
 <div class="col offset-xl-0">
-<div *ngFor="let idea of ideas">
+<div *ngFor="let reto of retos">
     <div class="row">
         <div class="col offset-lg-2 offset-xl-3">
     <img class="rounded-circle" src="/assets/img/fotoPerfil1.png" id="fotoPerfil">
         </div>
      </div>
-     <div class="row">
-           <div class="col">
-                <p id="ideaTitle"><br><strong>{{idea.titulo}}</strong><br></p>
-                <p id="ideaDescription">{{idea.descripcion}}<br><br></p>
-            <p id="votesAndNumberComments">Votos &nbsp; &nbsp; <strong>{{idea.numeroVotos}}</strong> &nbsp; &nbsp; Comentarios &nbsp; &nbsp;<strong>{{idea.numeroComentarios}}
-                <a [routerLink] = "['/idea-show', idea.id]" ><button class="btn" type="button">Ver</button></a>
-            </strong></p>
+        <div class="row">
+            <div class="col">
+                <p id="retoTitle"><br><strong>{{reto.nombre}}</strong><br></p>
+                <p id="retoDescription">{{reto.descripcion}}<br><br></p>
+                <p id="tema">Tema: {{reto.tema}}<br><br></p>
+                <p id="tiempo">Tiempo restante: {{reto.tiempo}} dias<br><br></p>
+                <p id="numeroIdeas">Ideas: &nbsp; &nbsp; <strong>{{reto.cantidadIdeas}}</strong></p>
+                <p id="fechaPublicacion">Publicacion: {{reto.fechaPublicacion}}<br><br></p>
+            </div>
         </div>
-    </div>
 </div>
 </div>

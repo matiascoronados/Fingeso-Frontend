@@ -1,0 +1,81 @@
+#botonAgregarIdea {
+    width: 150px;
+    height: 150px;
+    margin: -3% 6% 5% 41%;
+    padding: 0px;   
+}
+
+#dropDownOrdenar {
+    height: 40px;
+    margin: 15px;
+    background-color: rgb(255,255,255);
+    width: 200px;
+    font-size: 15px;
+
+}
+
+#inputText {
+    width: 570px;
+    margin: 15px;
+    height: 40px;
+}
+
+
+#buscarButton {
+    height: 40px;
+    margin: 15px 15px 15px -40px;
+    padding: 0px;
+    width: 120px;
+    color: rgb(255,255,255);
+    background-color: rgb(208,61,61);
+    font-size: 15px;
+
+}
+
+#fotoPerfil{
+    width: 150px;
+    height: 150px;
+    margin: 15px 15px -216px 124px;
+}
+
+
+#retoTitle{
+    font-size: 26px;
+    margin: 10px;
+    
+
+}
+
+#retoDescription{
+    margin: 10px;
+    height: 100px;
+    overflow: hidden;
+    width: 380px;
+    font-size: 14px;
+
+}
+
+#numeroIdeas{
+    margin: 10px;
+    font-size: 13px;
+}
+
+#fechaPublicacion{
+    margin: 10px;
+    font-size: 13px;
+}
+
+#tiempo{
+    margin: 10px;
+    font-size: 13px;
+}
+
+#tema{
+    margin: 10px;
+    font-size: 13px;
+}
+
+#addRetoText{
+    font-size: 15px;
+    margin: 10px 10px 10px 80px;
+}
