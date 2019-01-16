@@ -26,6 +26,7 @@ export class IdeaShowComponent implements OnInit {
         this.ideasService.show(id).subscribe((idea: any) => {
           if (idea) {
             this.idea = idea;
+            this.idea.href = window.location.href
             console.log(idea);
           } else {
             console.log(`Idea with id '${id}' not found, returning to list`);
@@ -38,5 +39,11 @@ export class IdeaShowComponent implements OnInit {
 
   gotoList() {
     this.router.navigate(['/ideas-list']);
+  }
+
+  delete(href: string){
+    this.ideasService.remove(href).subscribe(result =>{
+      this.gotoList();
+    });
   }
 }

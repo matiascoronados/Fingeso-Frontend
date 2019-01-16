@@ -23,8 +23,8 @@ export class IdeasService {
   	return this.http.get(this.IDEA_API + '/' + id);
   }
 
-  remove(href: string){
-  	return this.http.delete(href);
+  remove(id: string){
+  	return this.http.delete(this.IDEA_API + '/' + id);
   }
 
   getByComentarios(): Observable<any>{
