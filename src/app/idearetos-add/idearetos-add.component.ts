@@ -2,6 +2,7 @@ import { Component, OnDestroy ,OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IdeasService } from '../crear-idea/ideas.service';
+import { UsuarioService } from '../crear-idea/usuario.service';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -16,7 +17,8 @@ export class IdearetosAddComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
   			  private router: Router,
-  			  private ideasService: IdeasService) { }
+  			  private ideasService: IdeasService,
+  			  private usuarioService: UsuarioService) { }
 
   ngOnInit() 
   {
@@ -39,6 +41,10 @@ export class IdearetosAddComponent implements OnInit {
    {
    		const id = params['id']; 
    		this.ideasService.saveByReto(this.idea, id).subscribe(result => {
+      	this.gotoList();
+    	}, error => console.error(error));
+    	
+    	this.usuarioService.saveIdea(this.idea).subscribe(result => {
       	this.gotoList();
     	}, error => console.error(error));
    }

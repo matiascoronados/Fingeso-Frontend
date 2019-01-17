@@ -26,7 +26,7 @@ export class RetoService {
 
   save(reto: any): Observable<any>{
 	let result: Observable<Object>;
-	result = this.http.post(this.IDEA_API, reto);
+	result = this.http.post(this.IDEA_API + '/5c3a8a33b41d12063d7dc59d', reto);
 	return result;
   }
 
@@ -45,6 +45,10 @@ export class RetoService {
   getByTema(tema: string): Observable<any>{
     return this.http.get(this.IDEA_API + '/' + tema +'/getRetoByTema');
   }   
+
+  getIdeasByReto(idreto: string): Observable<any>{
+    return this.http.get(this.IDEA_API + '/' + idreto +'/getRetoByTema');
+  }
 
 
 
