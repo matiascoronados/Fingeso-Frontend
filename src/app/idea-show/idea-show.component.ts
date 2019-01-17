@@ -13,6 +13,7 @@ export class IdeaShowComponent implements OnInit {
   idOf: string;
   idea: any = {};
   sub: Subscription;
+  comentarios: Array<any>;
 
   constructor(private route: ActivatedRoute,
     private router: Router,
@@ -35,6 +36,9 @@ export class IdeaShowComponent implements OnInit {
         });
       }
     });
+    this.ideasService.comentarios(this.idOf).subscribe(data =>{
+        this.comentarios = data;
+      });
   }
 
   gotoList() {
@@ -45,5 +49,11 @@ export class IdeaShowComponent implements OnInit {
     this.ideasService.remove(href).subscribe(result =>{
       this.gotoList();
     });
+  }
+
+  getComentarios(){
+      this.ideasService.comentarios(this.idOf).subscribe(data =>{
+        this.comentarios = data;
+      });
   }
 }

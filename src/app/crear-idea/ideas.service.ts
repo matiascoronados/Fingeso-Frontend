@@ -15,6 +15,10 @@ export class IdeasService {
     return this.http.get(this.IDEA_API);
   }
 
+  comentarios(id: string): Observable<any>{
+    return this.http.get(this.API + '/comentarios/' + id);
+  }
+
   show(id: string): Observable<any>{
     return this.http.get(this.IDEA_API + '/' + id);
   }
@@ -49,7 +53,7 @@ export class IdeasService {
 
   save(idea: any): Observable<any>{
     let result: Observable<Object>;
-    result = this.http.post(this.IDEA_API + '/5c3a8a33b41d12063d7dc59d', idea);
+    result = this.http.post(this.IDEA_API + '/5c37ef04aad7321848c71318', idea);
     return result;
   }
 

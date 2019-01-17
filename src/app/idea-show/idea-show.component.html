@@ -28,33 +28,22 @@
                     	<strong>+6</strong>personas han votado</p>
                 </div>
                 <div class="col-xl-1 offset-xl-2">
-                	<button class="btn btn-primary" type="button" style="font-size: 20px;width: 65px;height: 44px;background-image: url(assets/img/126473.png&quot;);background-color: rgb(208,61,61);">
+                	<button class="btn btn-primary" type="button" style="font-size: 20px;width: 65px;height: 44px;background-image: url(assets/img/addIdeaIcon.png);background-color: rgb(208,61,61);">
                 		<img src="assets/img/126473.png" style="width: 40px;height: 35px;padding: 2px;"></button>
                 </div>
-                <div class="col-xl-2 offset-xl-0" style="width: 100px;">
-                	<img class="border rounded-circle" src="assets/img/foto2.png" style="width: 140px;height: 140px;margin: 5px;">
-                </div>
+            <div *ngFor="let comentario of comentarios">
+            <div class="col-xl-2 offset-xl-0" style="width: 100px;">
+            	<img class="border rounded-circle" src="assets/img/foto2.png" style="width: 140px;height: 140px;margin: 5px;">
+            </div>
             <div class="col-xl-9">
                 <p style="font-size: 23px;margin: 10px;width: 600px;"><strong>Maria Teresa </strong><em>Ejecutiva de ventas</em></p>
-                <p style="font-size: 15px;margin: 10px;">Estos días, algunos de los Másters en los que imparto clases de Marketing Digital están llegando a su fin y los alumnos deben presentar sus proyectos de final de Máster. Estos proyectos pueden ser en forma de investigación, en forma de
-                    Plan de Marketing o en forma de Plan de Negocio. La mayor parte de mis alumnos eligen ésta última opción.<br></p>
+                <p style="font-size: 15px;margin: 10px;">{{comentario.texto}}<br></p>
             </div>
             <div class="col-xl-1 offset-xl-0">
-            	<img src="assets/img/x-icon-white-20.jpg" style="width: 20px;height: 20px;margin: 10px;">
-            	<img src="assets/img/Edit_icon_(the_Noun_Project_30184).svg.png" style="width: 30px;height: 30px;margin: 5px;">
+            	<img src="assets/img/addIdeaIcon.png" style="width: 20px;height: 20px;margin: 10px;">
+            	<img src="assets/img/addIdeaIcon.png" style="width: 30px;height: 30px;margin: 5px;">
             </div>
-            <div class="col-xl-2 offset-xl-0" style="width: 100px;">
-            	<img class="border rounded-circle" src="assets/img/Businessman-Images-HD-copy-1-480x400.png" style="width: 140px;height: 140px;margin: 5px;">
-            </div>
-            <div class="col-xl-9">
-                <p style="font-size: 23px;margin: 10px;width: 600px;"><strong>Pablo Sanhueza </strong>Director de marketing</p>
-                <p style="font-size: 15px;margin: 10px;">Estos días, algunos de los Másters en los que imparto clases de Marketing Digital están llegando a su fin y los alumnos deben presentar sus proyectos de final de Máster. Estos proyectos pueden ser en forma de investigación, en forma de
-                    Plan de Marketing o en forma de Plan de Negocio. La mayor parte de mis alumnos eligen ésta última opción.<br></p>
-            </div>
-            <div class="col-xl-1">
-            	<img src="assets/img/x-icon-white-20.jpg" style="width: 20px;height: 20px;margin: 10px;">
-            	<img src="assets/img/Edit_icon_(the_Noun_Project_30184).svg.png" style="width: 30px;height: 30px;margin: 5px;">
-            </div>
+        </div>
             <div class="col-xl-12">
             	<button class="btn btn-primary" type="button" style="background-color: rgb(208,61,61);height: 50px;font-size: 20px;margin: 15px;">Enviar comentario</button>
             	<input type="text" style="height: 100px;width: 850px;margin: 5px;">
