@@ -28,7 +28,7 @@
                 </select>
             </div>
             <div class="col-lg-6 offset-lg-0" style="width: 700px;">
-                <input id="titulo" [(ngModel)]="titulo"/></div>
+                <input id="inputText" [(ngModel)]="titulo"/></div>
 
             <div class="col-lg-1 offset-lg-0" style="padding: 0px;">
                 <button (click)="getIdeaByTitulo()" class="btn" type="button" id="buscarButton">Buscar</button></div>
@@ -59,7 +59,7 @@
 <div *ngFor="let idea of ideas">
     <div class="row">
         <div class="col offset-lg-2 offset-xl-3">
-    <img class="rounded-circle" src="/assets/img/fotoPerfil1.png" id="fotoPerfil">
+    <img class="w3-card-4" src="/assets/img/fotoPerfil1.png" id="fotoPerfil">
         </div>
      </div>
      <div class="row">
