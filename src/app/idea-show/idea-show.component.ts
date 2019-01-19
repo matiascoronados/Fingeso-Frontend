@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IdeasService } from '../crear-idea/ideas.service';
+import { ComentarioService } from '../crear-idea/comentario.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgForm, NgControl } from '@angular/forms';
 import { Subscription } from 'rxjs';
@@ -17,7 +18,8 @@ export class IdeaShowComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
     private router: Router,
-    private ideasService: IdeasService) { }
+    private ideasService: IdeasService,
+    private comentariosService: ComentarioService) { }
 
   ngOnInit() {
   	this.sub = this.route.params.subscribe(params => {
@@ -28,7 +30,6 @@ export class IdeaShowComponent implements OnInit {
           if (idea) {
             this.idea = idea;
             this.idea.href = window.location.href
-            console.log(idea);
           } else {
             console.log(`Idea with id '${id}' not found, returning to list`);
             this.gotoList();
@@ -36,7 +37,7 @@ export class IdeaShowComponent implements OnInit {
         });
       }
     });
-    this.ideasService.comentarios(this.idOf).subscribe(data =>{
+    this.comentariosService.comentarios(this.idOf).subscribe(data =>{
         this.comentarios = data;
       });
   }
@@ -51,9 +52,4 @@ export class IdeaShowComponent implements OnInit {
     });
   }
 
-  getComentarios(){
-      this.ideasService.comentarios(this.idOf).subscribe(data =>{
-        this.comentarios = data;
-      });
-  }
 }

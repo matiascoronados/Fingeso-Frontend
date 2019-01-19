@@ -1,0 +1,8 @@
+<form #comentarioForm="ngForm" (ngSubmit)="save()">
+	<div class="col-xl-12">
+         <button class="btn" type="submit" style="background-color: rgb(208,61,61);height: 50px;font-size: 20px;margin: 15px;">Enviar comentario</button>
+         <div class="container">
+          <input type="text" [(ngModel)]= "comentario.texto" name="texto" style="height: 100px;width: 850px;margin: 5px;">
+      </div>
+    </div>
+</form>

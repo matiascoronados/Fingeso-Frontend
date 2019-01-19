@@ -15,10 +15,6 @@ export class IdeasService {
     return this.http.get(this.IDEA_API);
   }
 
-  comentarios(id: string): Observable<any>{
-    return this.http.get(this.API + '/comentarios/' + id);
-  }
-
   show(id: string): Observable<any>{
     return this.http.get(this.IDEA_API + '/' + id);
   }

@@ -12,6 +12,7 @@ import { IdeaShowComponent } from './idea-show/idea-show.component';
 import { IdearetosListComponent } from './idearetos-list/idearetos-list.component';
 import { IdearetosAddComponent } from './idearetos-add/idearetos-add.component';
 import { RetosAddComponent } from './retos-add/retos-add.component';
+import { ComentarioAddComponent } from './comentario-add/comentario-add.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { RetosAddComponent } from './retos-add/retos-add.component';
     RetosListComponent,
     IdearetosListComponent,
     IdearetosAddComponent,
-    RetosAddComponent
+    RetosAddComponent,
+    ComentarioAddComponent
   ],
   imports: [
     BrowserModule,
