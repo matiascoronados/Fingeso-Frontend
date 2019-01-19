@@ -26,12 +26,8 @@ export class ComentarioAddComponent implements OnInit {
   }
 
   goToIdea(){
-  	this.sub=this.route.params.subscribe(params => {
-  		const id = params['id'];
-  		console.log(id);
-  		this.router.navigate(['/idea-show/'+id]);
-  	})
-  }
+  	window.location.reload();
+   		}
 
   save(){
   	this.sub = this.route.params.subscribe(params =>{
