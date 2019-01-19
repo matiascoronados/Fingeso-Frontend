@@ -52,4 +52,10 @@ export class IdeaShowComponent implements OnInit {
     });
   }
 
+  deleteComentario(href: string){
+    this.comentariosService.removeCom(href).subscribe(result =>{
+      window.location.reload();
+    });
+  }
+
 }

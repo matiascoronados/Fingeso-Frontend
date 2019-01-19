@@ -27,7 +27,7 @@ export class ComentarioAddComponent implements OnInit {
 
   goToIdea(){
   	window.location.reload();
-   		}
+  }
 
   save(){
   	this.sub = this.route.params.subscribe(params =>{
@@ -37,9 +37,9 @@ export class ComentarioAddComponent implements OnInit {
   			this.goToIdea();
   		}, error => console.error(error));
   	}
-
-
   	);
   }
+
+  
 
 }

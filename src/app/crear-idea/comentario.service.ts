@@ -20,4 +20,8 @@ export class ComentarioService {
   	return result;
   }
 
+  removeCom(id: string){
+  	return this.http.delete(this.IDEA_API + '/' + id);
+  }
+
 }
