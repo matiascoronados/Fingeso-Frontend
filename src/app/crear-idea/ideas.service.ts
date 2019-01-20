@@ -49,7 +49,7 @@ export class IdeasService {
 
   save(idea: any): Observable<any>{
     let result: Observable<Object>;
-    result = this.http.post(this.IDEA_API + '/5c37ef04aad7321848c71318', idea);
+    result = this.http.post(this.IDEA_API + '/5c3a8a33b41d12063d7dc59d', idea);
     return result;
   }
 
@@ -61,6 +61,11 @@ export class IdeasService {
     let result: Observable<Object>;
     result = this.http.post(this.IDEA_API + '/' + id + '/addComentario',comentario);
     return result;
+  }
+
+  getUsuario(id: string): Observable<any>{
+    let result: Observable<Object>;
+    result = this.http.get(this.IDEA_API + '/' + 'id' + '/getUsuario');
   }
 
   saveByReto(idea: any,id: string){
