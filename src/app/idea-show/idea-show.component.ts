@@ -13,6 +13,7 @@ import { Subscription } from 'rxjs';
 export class IdeaShowComponent implements OnInit {
   idOf: string;
   idea: any = {};
+  user: any = {};
   sub: Subscription;
   comentarios: Array<any>;
 
@@ -39,6 +40,7 @@ export class IdeaShowComponent implements OnInit {
             this.gotoList();
           }
         });
+        this.ideasService.getUsuario(id).subscribe(data => {this.user = data;});
       }
     });
     this.comentariosService.comentarios(this.idOf).subscribe(data =>{

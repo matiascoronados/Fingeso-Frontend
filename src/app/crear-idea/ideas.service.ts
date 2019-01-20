@@ -65,7 +65,8 @@ export class IdeasService {
 
   getUsuario(id: string): Observable<any>{
     let result: Observable<Object>;
-    result = this.http.get(this.IDEA_API + '/' + 'id' + '/getUsuario');
+    result = this.http.get(this.IDEA_API + '/' + id + '/getUsuario');
+    return result;
   }
 
   saveByReto(idea: any,id: string){
