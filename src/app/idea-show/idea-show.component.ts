@@ -60,7 +60,7 @@ export class IdeaShowComponent implements OnInit {
 
   addiVoto(){
     this.ideasService.addVoto(this.idOf).subscribe(result =>{
-      window.location.reload();
+      this.idea = result;
     });
   }
 

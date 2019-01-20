@@ -54,7 +54,9 @@ export class IdeasService {
   }
 
   addVoto(id: string): Observable<any>{
-    return this.http.post(this.IDEA_API + '/' + id + '/addVoto');
+    let result: Observable<Object>;
+    result = this.http.post(this.IDEA_API + '/' + id + '/addVoto', {});
+    return result;
   }
 
   saveComentario(comentario: any, id: string): Observable<any>{
