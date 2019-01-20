@@ -21,6 +21,10 @@ export class IdeaShowComponent implements OnInit {
     private ideasService: IdeasService,
     private comentariosService: ComentarioService) { }
 
+    funcion(){
+    this.router.navigate([this.comentarios]);
+    }
+
   ngOnInit() {
   	this.sub = this.route.params.subscribe(params => {
       const id = params['id'];
@@ -49,6 +53,12 @@ export class IdeaShowComponent implements OnInit {
   delete(href: string){
     this.ideasService.remove(href).subscribe(result =>{
       this.gotoList();
+    });
+  }
+
+  addiVoto(){
+    this.ideasService.addVoto(this.idOf).subscribe(result =>{
+      window.location.reload();
     });
   }
 

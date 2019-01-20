@@ -53,6 +53,16 @@ export class IdeasService {
     return result;
   }
 
+  addVoto(id: string): Observable<any>{
+    return this.http.post(this.IDEA_API + '/' + id + '/addVoto');
+  }
+
+  saveComentario(comentario: any, id: string): Observable<any>{
+    let result: Observable<Object>;
+    result = this.http.post(this.IDEA_API + '/' + id + '/addComentario',comentario);
+    return result;
+  }
+
   saveByReto(idea: any,id: string){
     let result: Observable<Object>;
     result = this.http.post(this.IDEA_API + '/5c3a8a33b41d12063d7dc59d/' + id, idea);

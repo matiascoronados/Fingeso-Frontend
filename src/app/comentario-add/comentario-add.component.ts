@@ -36,6 +36,9 @@ export class ComentarioAddComponent implements OnInit {
   		this.comentarioService.saveComentario(this.comentario, id).subscribe(result => {
   			this.goToIdea();
   		}, error => console.error(error));
+      this.ideasService.saveComentario(this.comentario, id).subscribe(result => {
+      this.goToIdea();
+      }, error => console.error(error));
   	}
   	);
   }
