@@ -1,8 +1,8 @@
 #botonAgregarIdea {
-    width: 40px;
-    height: 40px;
-    margin: -3% 6% 5% 41%;
-    padding: 0px;   
+    width: 110%;
+    height: 90%;
+    margin: 15% 12% -35% 34%;
+    padding: 0px;    
 }
 
 #dropDownOrdenar {
@@ -15,52 +15,63 @@
 }
 
 #inputText {
-    width: 570px;
-    margin: 15px;
-    height: 40px;
+    width: 95%;
+    margin: 2.2% -7% 5% -1%;
+    height: 57%;
 }
 
 
 #buscarButton {
-    height: 40px;
-    margin: 15px 15px 15px -40px;
+    height: 59%;
+    margin: 12% 10% 10% -30%;
     padding: 0px;
-    width: 120px;
+    width: 100%;
     color: rgb(255,255,255);
     background-color: rgb(208,61,61);
-    font-size: 15px;
+    font-size: 150%;
 
 }
 
 #fotoPerfil{
-    width: 150px;
-    height: 150px;
-    margin: 15px 15px -216px 124px;
+    width: 21%;
+    height: 788%;
+    margin: -23.6% 10% -47% 30%;
 }
 
 
 #ideaTitle{
-    font-size: 26px;
-    margin: 10px;
+    font-size: 130%;
+    margin: 1% 0% 1% 0%;
     
 
 }
 
 #ideaDescription{
-    margin: 10px;
-    height: 100px;
+    margin: 0%;
+    height: 83px;
     overflow: hidden;
-    width: 380px;
-    font-size: 14px;
+    width: 40%;
+    font-size: 144%;
+    border: 1px solid black;
+    border-radius: 5px;
+    word-break: inherit;
 
 }
 
 #votesAndNumberComments{
-    margin: 10px;
-    font-size: 13px;
+    margin: 1% 0% 1% 0%;
+    font-size: 130%;
 }
 
 #addIdeaText{
-    font-size: 15px;
-    margin: 10px 10px 10px 80px;
+    font-size: 156%;
+    margin: 11% 10% 9% 39%;
+}
+
+#botonVerIdea{
+    background-color: rgb(208,61,61);
+    background-image: url("/assets/img/view.png");
+    padding: 3px;
+    width: 32px;
+    height: 32px;
 }

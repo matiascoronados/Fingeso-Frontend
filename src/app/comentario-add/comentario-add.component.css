@@ -1,0 +1,16 @@
+#cajaComentario{
+    height: 100px;
+    width: 980px;
+    margin: 5px; 
+    overflow: auto;
+    font-size: 150%
+}
+
+
+#botonEnviarComentario{
+    background-color: rgb(208,61,61);
+    height: 50px;
+    font-size: 20px;
+    margin: 1% 0% 0% 75%;
+    color: white;
+}

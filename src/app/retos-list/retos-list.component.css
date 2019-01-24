@@ -15,9 +15,10 @@
 }
 
 #inputText {
-    width: 570px;
-    margin: 15px;
-    height: 40px;
+    width: 95%;
+    margin: 2.2% -7% 5% -1%;
+    height: 57%;
+    font-size: 150%;
 }
 
 
@@ -76,6 +77,20 @@
 }
 
 #addRetoText{
-    font-size: 15px;
-    margin: 10px 10px 10px 80px;
+    font-size: 156%;
+    margin: 11% 10% 9% 39%;
+}
+
+#btn{
+    background-color: rgb(208,61,61);
+    color: white;
+    font-size: 150%;
+}
+
+#botonVerIdea{
+    background-color: rgb(208,61,61);
+    background-image: url("/assets/img/view.png");
+    padding: 3px;
+    width: 32px;
+    height: 32px;
 }
